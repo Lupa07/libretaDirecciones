@@ -1,19 +1,24 @@
 <div class="contenedor-general">
   <div class="contenido-general">
-    <div class="contenedor-cabecera">
+    <div class="contenedor-cabecera este50px">
       <app-cabecera></app-cabecera>
     </div>
-    <div class="contenedor-listado">
-      <app-listado></app-listado>
-    </div>
-    <div class="contenido-botonera">
-      <app-botonera></app-botonera>
-    </div>
-    <div class="contendio-datos">
-      <app-datos></app-datos>
-    </div>
-    <div class="contenido-mapa">
-      <app-mapa></app-mapa>
+    <div class="contenedor-del-cuerpo">
+      <div class="contenido-listado-y-botonera este300px">
+        <div class="contenedor-listado">
+          <app-listado></app-listado>
+        </div>
+        <div class="contenedor-botonera">
+          <app-botonera></app-botonera>
+        </div>
+      </div>
+
+      <div class="contenido-datos este1fr">
+        <app-datos></app-datos>
+      </div>
+      <div class="contenido-mapa este1fr">
+        <app-mapa></app-mapa>
+      </div>
     </div>
   </div>
 </div>

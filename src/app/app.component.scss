@@ -1,0 +1,52 @@
+.contenedor-general{
+    height: 100%;
+   
+   background-color: aqua;
+     
+    padding: 10px;
+    .contenido-general{
+       
+        display:grid;
+        grid-template-rows:50px 1fr ;
+        background-color: coral;
+        .contenedor-cabecera{
+            background-color: brown;
+            height: 50px;
+            
+        }
+        .contenedor-del-cuerpo{
+            background-color: blueviolet;
+            display: grid;
+            height: 100%;
+            grid-template-columns: 300px 1fr 1fr;
+            
+            padding: 10px;
+
+            .contenido-listado-y-botonera{
+               
+                display: grid;
+                height: 100%;
+                grid-template-rows: 50px 1fr 50px;
+                background-color: blueviolet;
+                .contenedor-listado{
+                    height: 100%;
+                }
+                .contenedor-botonera{
+                    
+                    height: 50px;
+                    background-color: brown;
+                }
+            }
+            .contenido-datos{
+                height: 100%;
+                background-color: aquamarine;
+
+            }
+            .contenido-mapa{
+                height: 100%;
+                background-color: blue;
+            }
+
+        }
+    }
+}
