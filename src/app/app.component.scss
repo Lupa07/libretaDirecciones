@@ -1,56 +1,51 @@
-.contenedor-general{
-    height: 100%;
-   
-   background-color: aqua;
-     
-    padding: 10px;
-    .contenido-general{
-       
-        display:grid;
-        grid-template-rows:50px 1fr ;
-        background-color: coral;
-        .contenedor-cabecera{
-            background-color: brown;
-            height: 50px;
-            border: 1px solid black;
-            
-        }
-        .contenedor-del-cuerpo{
-            background-color: blueviolet;
-            display: grid;
-            height: 100%;
-            grid-template-columns: 300px 1fr 1fr;
-            
-            
-            border: 1px solid black;
-            .contenido-listado-y-botonera{
-               
-                display: grid;
-                height: 100%;
-                grid-template-rows: 50px 1fr 50px;
-                background-color: blueviolet;
-                border: 1px solid black;
-                .contenedor-listado{
-                    height: 100%;
-                    border: 1px solid black;
-                }
-                .contenedor-botonera{
-                    border: 1px solid black;
-                    height: 50px;
-                    background-color: brown;
-                }
-            }
-            .contenido-datos{
-                height: 100%;
-                background-color: aquamarine;
-                border: 1px solid black;
-            }
-            .contenido-mapa{
-                height: 100%;
-                background-color: blue;
-                border: 1px solid black;
-            }
-
-        }
+.contenedor-general {
+  height: 100vh;
+  background-color: aqua;
+  
+  .contenido-general {
+    height: 100vh;
+    
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    background-color: coral;
+    .contenedor-cabecera {
+      background-color: brown;
+      height: 50px;
+      border: 1px solid black;
     }
+    .contenedor-del-cuerpo {
+      background-color: blueviolet;
+      display: grid;
+      height: 100%;
+      grid-template-columns: 300px 1fr 1fr;
+
+      border: 1px solid black;
+      .contenido-listado-y-botonera {
+        display: grid;
+        height: 100%;
+        grid-template-rows: 1fr 50px;
+        background-color: blueviolet;
+        border: 1px solid black;
+        .contenedor-listado {
+          height: 100%;
+          border: 1px solid black;
+        }
+        .contenedor-botonera {
+          border: 1px solid black;
+          height: 50px;
+          background-color: brown;
+        }
+      }
+      .contenido-datos {
+        height: 100%;
+        background-color: aquamarine;
+        border: 1px solid black;
+      }
+      .contenido-mapa {
+        height: 100%;
+        background-color: blue;
+        border: 1px solid black;
+      }
+    }
+  }
 }
