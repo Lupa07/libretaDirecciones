@@ -6,18 +6,18 @@
     <div class="contenedor-del-cuerpo">
       <div class="contenido-listado-y-botonera este300px">
         <div class="contenedor-listado">
-          <app-listado></app-listado>
+          <app-listado (usuarioSelecionadoRespuesta)="seleccionaUsuario($event)" [usuariosPadre]="usuarios"></app-listado>
         </div>
-        <div class="contenedor-botonera">
-          <app-botonera></app-botonera>
+        <div class="contenedor-botonera" >
+          <app-botonera [usuarioSeleccionadoBotonera]="usuarioSeleccionado" ></app-botonera>
         </div>
       </div>
 
       <div class="contenido-datos este1fr">
-        <app-datos></app-datos>
+        <app-datos [usuarioSeleccionadoPadre2]="usuarioSeleccionado"></app-datos>
       </div>
       <div class="contenido-mapa este1fr">
-        <app-mapa></app-mapa>
+        <app-mapa  [usuarioSeleccionadoMapa]="usuarioSeleccionado"></app-mapa>
       </div>
     </div>
   </div>
