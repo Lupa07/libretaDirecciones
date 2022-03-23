@@ -1,12 +1,15 @@
 <div class="input-group mb-3">
-    <input type="text" class="form-control"   placeholder="Nombre" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <input type="text" class="form-control" [(ngModel)]="nombre" placeholder="Nombre" aria-label="Recipient's username" aria-describedby="basic-addon2">
     <div class="input-group-append">
-      <span class="input-group-text" id="basic-addon2"  >Buscar</span>
+     
+      <button class="btn-secondary btn-lg btn-block"  id="basic-addon2" (click)="buscarNombre()" >Buscar</button>
+      
     </div>
+    
   </div>
 <div class="botones-usuario">
   <button
-    class="btn-secondary btn-lg btn-block"
+    class="btn-secondary btn-lg btn-block botonUsuario"
     *ngFor="let item of filtro_usuario; let i = index"
     (click)="muestraUsuario(i)"
   >

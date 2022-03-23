@@ -12,7 +12,7 @@ export class ListadoComponent{
   @Input ()usuariosPadre:any;
   
   @Output() usuarioSelecionadoRespuesta : EventEmitter<any> = new EventEmitter;
-  valorBuscador='';
+  nombre='';
   filtro_usuario:any;
 
 
@@ -41,7 +41,20 @@ export class ListadoComponent{
   }
 
   buscarNombre(){
-    
+    this.filtro_usuario=[];
+
+    if(this.nombre){
+
+      for(var usuario of this.usuariosPadre){
+
+        if(usuario.nombre.toLowerCase().indexOf(this.nombre.toLowerCase())>=0){
+          this.filtro_usuario.push(usuario)
+        }
+      }
+    }else[
+      this.filtro_usuario=this.usuariosPadre
+    ]
+
   }
 
   
