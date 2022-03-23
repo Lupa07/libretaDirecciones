@@ -9,14 +9,14 @@
           <app-listado (usuarioSelecionadoRespuesta)="seleccionaUsuario($event)" [usuariosPadre]="usuarios"></app-listado>
         </div>
         <div class="contenedor-botonera" >
-          <app-botonera [usuarioSeleccionadoBotonera]="usuarioSeleccionado" ></app-botonera>
+          <app-botonera (cambiosListaRespuesta)="cambiosLista($event)" ></app-botonera>
         </div>
       </div>
 
-      <div class="contenido-datos este1fr">
-        <app-datos [usuarioSeleccionadoPadre2]="usuarioSeleccionado"></app-datos>
+      <div class="contenido-datos">
+        <app-datos (datosModificar)="datosUsuarioModificar($event)" [usuarioSeleccionadoPadre2]="usuarioSeleccionado"></app-datos>
       </div>
-      <div class="contenido-mapa este1fr">
+      <div class="contenido-mapa">
         <app-mapa  [usuarioSeleccionadoMapa]="usuarioSeleccionado"></app-mapa>
       </div>
     </div>

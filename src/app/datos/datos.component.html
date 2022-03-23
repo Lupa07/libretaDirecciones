@@ -10,7 +10,7 @@
                 class="form-control form-control-sm"
                 type="text"
                 value="{{usuarioSeleccionadoPadre2.nombre}}"
-                readonly
+                (change)="inputNombre($event.target)"
               />
             </div>
           </div>
@@ -21,7 +21,7 @@
                 class="form-control form-control-sm"
                 type="text"
                 value="{{usuarioSeleccionadoPadre2.apellidos}}"
-                readonly
+                (change)="inputApellidos($event.target)"
               />
             </div>
           </div>
@@ -32,7 +32,7 @@
                 class="form-control form-control-sm"
                 type="text"
                 value="{{usuarioSeleccionadoPadre2.email}}"
-                readonly
+                (change)="inputEmail($event.target)"
               />
             </div>
           </div>
@@ -43,7 +43,7 @@
                 class="form-control form-control-sm"
                 type="text"
                 value="{{usuarioSeleccionadoPadre2.telefono}}"
-                readonly
+                (change)="inputTelefono($event.target)"
               />
             </div>
           </div>
@@ -57,7 +57,7 @@
               class="form-control form-control-sm"
               type="text"
               value="{{usuarioSeleccionadoPadre2.direccion}}"
-              readonly
+              (change)="inputDireccion($event.target)"
             />
           </div>
         </div>
@@ -68,7 +68,7 @@
               class="form-control form-control-sm"
               type="text"
               value="{{usuarioSeleccionadoPadre2.codigo_postal}}"
-              readonly
+              (change)="inputCodigoPostal($event.target)"
             />
           </div>
         </div>
@@ -80,7 +80,7 @@
             class="form-control form-control-sm"
             type="text"
             value="{{usuarioSeleccionadoPadre2.poblacion}}"
-            readonly
+            (change)="inputPoblacion($event.target)"
           />
         </div>
       </div>
@@ -91,7 +91,7 @@
             class="form-control form-control-sm"
             type="text"
             value="{{usuarioSeleccionadoPadre2.provincia}}"
-            readonly
+            (change)="inputProvincia($event.target)"
           />
         </div>
       </div>
@@ -103,7 +103,7 @@
               class="form-control form-control-sm"
               type="text"
               value="{{usuarioSeleccionadoPadre2.profesion}}"
-              readonly
+              (change)="inputProfesion($event.target)"
             />
           </div>
         </div>
@@ -114,7 +114,7 @@
               class="form-control form-control-sm"
               type="text"
               value="{{usuarioSeleccionadoPadre2.notas}}"
-              readonly
+              (change)="inputNotas($event.target)"
             />
           </div>
         </div>

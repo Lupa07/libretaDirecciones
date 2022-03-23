@@ -1,3 +1,7 @@
-<button type="button" class="btn btn-secondary">Crear</button>
-<button type="button" class="btn btn-secondary" (click)="eliminarUsuario()">Eliminar</button>
-<button type="button" class="btn btn-secondary">Modificar</button>
+<div class="contenedor-principal">
+    <div class="contenedor-botones">
+        <button class="boton-crear btn btn-primary " (click)="presionarBoton('crear')">Crear</button>
+        <button class="boton-modificar btn btn-primary" (click)="presionarBoton('modificar')">Modificar</button>
+        <button class="boton-borrar btn btn-primary" (click)="presionarBoton('borrar')">Borrar</button>
+    </div>
+</div>

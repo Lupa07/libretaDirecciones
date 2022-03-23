@@ -8,24 +8,12 @@ import { Component, OnInit , Input , Output,EventEmitter } from '@angular/core';
 export class BotoneraComponent {
 
   
-  @Input ()usuarioSeleccionadoBotonera:any;
-  
-  @Output() usuarioSelecionadoRespuestaBotonera : EventEmitter<any> = new EventEmitter;
+  @Output() cambiosListaRespuesta : EventEmitter<any> = new EventEmitter;
 
-  botonera_usuario:any;
-  
-  constructor() { }
-
-  
-
-  crearUsuario(){
-
-  }
-  modificarUsuario(){
-
-  }
-  eliminarUsuario(){
-    
-    this.usuarioSeleccionadoBotonera.nombre="";
+  presionarBoton(datos:string){
+    console.log(datos);
+    this.cambiosListaRespuesta.emit(datos);
   }
 }
+
+

@@ -83,16 +83,71 @@ export class AppComponent {
     }
   ]
   usuarioSeleccionado :any;
-  
-  
-
+  datosUsuarioCambiar:any;
+  posicion:any;
   
   seleccionaUsuario(usuario:any){
     this.usuarioSeleccionado = usuario;
-    
+    this.posicion = this.usuarios.indexOf(this.usuarioSeleccionado);
+  }
+  datosUsuarioModificar(usuario:any){
+    this.datosUsuarioCambiar = usuario;
   }
 
-  
+  cambiosLista(cambio:any){
+    switch(cambio) { 
+      case 'crear': { 
+        this.crear();
+        break; 
+      } 
+      case 'borrar': { 
+        this.eliminar();
+        break; 
+      } 
+      case 'modificar': { 
+        this.modificar();
+        break; 
+      }  
+    }   
+  }
+  crear(){
+    let nuevo_usuario = {
+     "nombre" : "",
+     "apellidos" : "",
+     "email": "",
+     "telefono": "",
+     "direccion": "",
+     "codigo_postal": "",
+     "poblacion": "",
+     "provincia": "",
+     "profesion": "",
+     "notas": ""
+   }
+   this.usuarios.push(nuevo_usuario);
+ }
+  eliminar(){
+    this.usuarios.splice(this.usuarios.indexOf(this.usuarioSeleccionado),1)
+  }
+
+
+  modificar(){
+   console.log(this.usuarioSeleccionado);
+   console.log(this.datosUsuarioCambiar)
+  //  this.usuarios[this.usuarios.indexOf(this.usuarioSeleccionado)]=this.datosUsuarioCambiar;
+   let nuevo_usuario = {
+    "nombre" : this.datosUsuarioCambiar.nombre,
+    "apellidos" : this.datosUsuarioCambiar.apellidos,
+    "email": this.datosUsuarioCambiar.email,
+    "telefono": this.datosUsuarioCambiar.telefono,
+    "direccion": this.datosUsuarioCambiar.direccion,
+    "codigo_postal": this.datosUsuarioCambiar.codigo_postal,
+    "poblacion": this.datosUsuarioCambiar.poblacion,
+    "provincia": this.datosUsuarioCambiar.provincia,
+    "profesion": this.datosUsuarioCambiar.profesion,
+    "notas": this.datosUsuarioCambiar.notas
+  }
+  this.usuarios[this.posicion]=nuevo_usuario;
+ }
 
   
 }
