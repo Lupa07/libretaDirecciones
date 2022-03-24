@@ -37,10 +37,10 @@ export class ListadoComponent {
           this.filtro_usuario.push(usuario)
         }
       }
-    } else[
+    } else {
       this.filtro_usuario = this.usuariosPadre
-    ]
-
+    }
+    
   }
 
 

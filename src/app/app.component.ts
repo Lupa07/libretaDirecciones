@@ -133,10 +133,10 @@ export class AppComponent {
   modificar() {
 console.log("Usuario Seleccionado")
     console.log(this.usuarioSeleccionado);
-   // this.datosUsuarioCambiar = this.usuarioSeleccionado;
+   
     
 
-   // this.usuarios[this.usuarios.indexOf(this.usuarioSeleccionado)] = this.datosUsuarioCambiar;
+  // this.usuarios[this.usuarios.indexOf(this.usuarioSeleccionado)] = this.datosUsuarioCambiar;
     let nuevo_usuario = {
       "nombre": this.datosUsuarioCambiar.nombre,
       "apellidos": this.datosUsuarioCambiar.apellidos,
