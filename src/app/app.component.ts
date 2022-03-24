@@ -151,7 +151,7 @@ console.log("Usuario Seleccionado")
     }
 
     this.datosUsuarioCambiar=nuevo_usuario;
-    this.usuarios[this.posicion] = nuevo_usuario;
+    //this.usuarios[this.posicion] = nuevo_usuario;
 
     console.log("Usuario con los datos cambiados")
     console.log(this.datosUsuarioCambiar)
