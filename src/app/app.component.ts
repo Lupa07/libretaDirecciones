@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'libretaDirecciones-Joaquin';
 
-  usuarios :any[]=[
+  usuarios: any[] = [
     {
-      "nombre" : "Horse Luis",
-      "apellidos" : "Lopez",
+      "nombre": "Horse Luis",
+      "apellidos": "Lopez",
       "email": "caballoLopez@gmail.com",
       "telefono": "666666666",
       "direccion": "c/Tesalonica,nº 8",
@@ -22,8 +22,8 @@ export class AppComponent {
       "notas": "Sobresaliente"
     },
     {
-      "nombre" : "Antonio",
-      "apellidos" : "Lopez",
+      "nombre": "Antonio",
+      "apellidos": "Lopez",
       "email": "AntonioLopez@gmail.com",
       "telefono": "666666666",
       "direccion": "c/Tesalonica,nº 10",
@@ -34,8 +34,8 @@ export class AppComponent {
       "notas": "Notable"
     },
     {
-      "nombre" : "Alfonso",
-      "apellidos" : "De Rojas",
+      "nombre": "Alfonso",
+      "apellidos": "De Rojas",
       "email": "FonsiDR@gmail.com",
       "telefono": "666666666",
       "direccion": "c/Tesalonica,nº 10",
@@ -46,8 +46,8 @@ export class AppComponent {
       "notas": "Notable"
     },
     {
-      "nombre" : "Joaquin",
-      "apellidos" : "Garcia",
+      "nombre": "Joaquin",
+      "apellidos": "Garcia",
       "email": "Joaquingarcia@gmail.com",
       "telefono": "666666666",
       "direccion": "c/Tesalonica,nº 10",
@@ -58,8 +58,8 @@ export class AppComponent {
       "notas": "Notable"
     },
     {
-      "nombre" : "Miguel",
-      "apellidos" : "Moreno",
+      "nombre": "Miguel",
+      "apellidos": "Moreno",
       "email": "MiguelMoreno@gmail.com",
       "telefono": "666666666",
       "direccion": "c/Tesalonica,nº 10",
@@ -70,8 +70,8 @@ export class AppComponent {
       "notas": "Notable"
     },
     {
-      "nombre" : "Rodrigo",
-      "apellidos" : "Marquez",
+      "nombre": "Rodrigo",
+      "apellidos": "Marquez",
       "email": "rodrigomarquez@gmail.com",
       "telefono": "666666666",
       "direccion": "c/Tesalonica,nº 10",
@@ -82,72 +82,81 @@ export class AppComponent {
       "notas": "Notable"
     }
   ]
-  usuarioSeleccionado :any;
-  datosUsuarioCambiar:any;
-  posicion:any;
-  
-  seleccionaUsuario(usuario:any){
+  usuarioSeleccionado: any;
+  datosUsuarioCambiar: any;
+  posicion: any;
+
+  seleccionaUsuario(usuario: any) {
     this.usuarioSeleccionado = usuario;
     this.posicion = this.usuarios.indexOf(this.usuarioSeleccionado);
   }
-  datosUsuarioModificar(usuario:any){
+  datosUsuarioModificar(usuario: any) {
     this.datosUsuarioCambiar = usuario;
   }
 
-  cambiosLista(cambio:any){
-    switch(cambio) { 
-      case 'crear': { 
+  accionDelBotton(cambio: any) {
+    switch (cambio) {
+      case 'crear': {
         this.crear();
-        break; 
-      } 
-      case 'borrar': { 
+        break;
+      }
+      case 'borrar': {
         this.eliminar();
-        break; 
-      } 
-      case 'modificar': { 
+        break;
+      }
+      case 'modificar': {
         this.modificar();
-        break; 
-      }  
-    }   
+        break;
+      }
+    }
   }
-  crear(){
+  crear() {
     let nuevo_usuario = {
-     "nombre" : "",
-     "apellidos" : "",
-     "email": "",
-     "telefono": "",
-     "direccion": "",
-     "codigo_postal": "",
-     "poblacion": "",
-     "provincia": "",
-     "profesion": "",
-     "notas": ""
-   }
-   this.usuarios.push(nuevo_usuario);
- }
-  eliminar(){
-    this.usuarios.splice(this.usuarios.indexOf(this.usuarioSeleccionado),1)
+      "nombre": "",
+      "apellidos": "",
+      "email": "",
+      "telefono": "",
+      "direccion": "",
+      "codigo_postal": "",
+      "poblacion": "",
+      "provincia": "",
+      "profesion": "",
+      "notas": ""
+    }
+    this.usuarios.push(nuevo_usuario);
+  }
+  eliminar() {
+    this.usuarios.splice(this.usuarios.indexOf(this.usuarioSeleccionado), 1)
   }
 
 
-  modificar(){
-   console.log(this.usuarioSeleccionado);
-   console.log(this.datosUsuarioCambiar)
-  //  this.usuarios[this.usuarios.indexOf(this.usuarioSeleccionado)]=this.datosUsuarioCambiar;
-   let nuevo_usuario = {
-    "nombre" : this.datosUsuarioCambiar.nombre,
-    "apellidos" : this.datosUsuarioCambiar.apellidos,
-    "email": this.datosUsuarioCambiar.email,
-    "telefono": this.datosUsuarioCambiar.telefono,
-    "direccion": this.datosUsuarioCambiar.direccion,
-    "codigo_postal": this.datosUsuarioCambiar.codigo_postal,
-    "poblacion": this.datosUsuarioCambiar.poblacion,
-    "provincia": this.datosUsuarioCambiar.provincia,
-    "profesion": this.datosUsuarioCambiar.profesion,
-    "notas": this.datosUsuarioCambiar.notas
-  }
-  this.usuarios[this.posicion]=nuevo_usuario;
- }
+  modificar() {
+console.log("Usuario Seleccionado")
+    console.log(this.usuarioSeleccionado);
+   // this.datosUsuarioCambiar = this.usuarioSeleccionado;
+    
 
-  
+   // this.usuarios[this.usuarios.indexOf(this.usuarioSeleccionado)] = this.datosUsuarioCambiar;
+    let nuevo_usuario = {
+      "nombre": this.datosUsuarioCambiar.nombre,
+      "apellidos": this.datosUsuarioCambiar.apellidos,
+      "email": this.datosUsuarioCambiar.email,
+      "telefono": this.datosUsuarioCambiar.telefono,
+      "direccion": this.datosUsuarioCambiar.direccion,
+      "codigo_postal": this.datosUsuarioCambiar.codigo_postal,
+      "poblacion": this.datosUsuarioCambiar.poblacion,
+      "provincia": this.datosUsuarioCambiar.provincia,
+      "profesion": this.datosUsuarioCambiar.profesion,
+      "notas": this.datosUsuarioCambiar.notas
+    }
+
+    this.datosUsuarioCambiar=nuevo_usuario;
+    this.usuarios[this.posicion] = nuevo_usuario;
+
+    console.log("Usuario con los datos cambiados")
+    console.log(this.datosUsuarioCambiar)
+
+  }
+
+
 }

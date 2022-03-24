@@ -1,20 +1,20 @@
 .contenedor-general {
   height: 100vh;
-  background-color: aqua;
+  background-color: rgba(216, 216, 216, 0.616);
   
   .contenido-general {
     height: 100vh;
     
     display: grid;
     grid-template-rows: 50px 1fr;
-    background-color: coral;
+    background-color: darkgray;
     .contenedor-cabecera {
-      background-color: brown;
+      background-color: rgba(224, 224, 224, 0.863);
       height: 50px;
       border: 1px solid black;
     }
     .contenedor-del-cuerpo {
-      background-color: blueviolet;
+      background-color: grey;
       display: grid;
       height: 100%;
       grid-template-columns: 300px 1fr 1fr;
@@ -24,7 +24,7 @@
         display: grid;
         height: 100%;
         grid-template-rows: 1fr 50px;
-        background-color: blueviolet;
+        background-color: rgb(235, 218, 250);
         border: 1px solid black;
         .contenedor-listado {
           height: 100%;
@@ -34,17 +34,17 @@
         .contenedor-botonera {
           border: 1px solid black;
           height: 50px;
-          background-color: brown;
+          background-color: rgb(252, 232, 232);
         }
       }
       .contenido-datos {
         height: 100%;
-        background-color: aquamarine;
+        background-color: rgb(233, 250, 244);
         border: 1px solid black;
       }
       .contenido-mapa {
         height: 100%;
-        background-color: blue;
+        background-color: rgb(233, 233, 255);
         border: 1px solid black;
       }
     }

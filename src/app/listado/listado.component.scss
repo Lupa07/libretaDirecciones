@@ -1,12 +1,14 @@
+.botones-usuario {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
-
-
-button {
-  
-    margin: 5px;
+  .botonUsuario {
+    //   margin: 5px;
     position: static;
-    height: 100px;
-    width: 45%;
+    height: 50px;
+    width: 100%;
     border: 1px solid #000;
-  
+    border-radius: 50px;
+  }
 }

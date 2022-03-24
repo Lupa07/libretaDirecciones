@@ -6,56 +6,42 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './listado.component.html',
   styleUrls: ['./listado.component.scss']
 })
-export class ListadoComponent{
+export class ListadoComponent {
 
 
-  @Input ()usuariosPadre:any;
-  
-  @Output() usuarioSelecionadoRespuesta : EventEmitter<any> = new EventEmitter;
-  nombre='';
-  filtro_usuario:any;
+  @Input() usuariosPadre: any;
+
+  @Output() usuarioSelecionadoRespuesta: EventEmitter<any> = new EventEmitter;
+  nombre = '';
+  filtro_usuario: any;
 
 
   ngOnInit(): void {
     this.usuarioSelecionadoRespuesta.emit(this.usuariosPadre[0])
-    this.filtro_usuario= this.usuariosPadre;
+    this.filtro_usuario = this.usuariosPadre;
   }
-  /*buscar(){
-    let palabra: string = this.valorBuscador;
-    this.filtro_usuario= [];
 
-    if(palabra){
-      for (var val of this.usuariosPadre) {   
-        if (val.nombre.toLowerCase().indexOf(palabra.toLowerCase())>=0){
-          this.filtro_usuario.push(val)
-        }
-      }
-    }
-    else{
-      this.filtro_usuario=this.usuariosPadre;
-    }
-  }*/
 
-  muestraUsuario(index:number){
+  muestraUsuario(index: number) {
     this.usuarioSelecionadoRespuesta.emit(this.usuariosPadre[index]);
   }
 
-  buscarNombre(){
-    this.filtro_usuario=[];
+  buscarNombre() {
+    this.filtro_usuario = [];
 
-    if(this.nombre){
+    if (this.nombre) {
 
-      for(var usuario of this.usuariosPadre){
+      for (var usuario of this.usuariosPadre) {
 
-        if(usuario.nombre.toLowerCase().indexOf(this.nombre.toLowerCase())>=0){
+        if (usuario.nombre.toLowerCase().indexOf(this.nombre.toLowerCase()) >= 0) {
           this.filtro_usuario.push(usuario)
         }
       }
-    }else[
-      this.filtro_usuario=this.usuariosPadre
+    } else[
+      this.filtro_usuario = this.usuariosPadre
     ]
 
   }
 
-  
+
 }
